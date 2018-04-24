@@ -1,0 +1,251 @@
+/* General rules */
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #5e5e5e;
+}
+
+* {
+  box-sizing: border-box;
+  /* Check what happens if you remove this */
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.8em;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.main-menu ul, .footer-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu .menu-item, .footer-menu .menu-item {
+  display: inline-block;
+}
+
+header,
+footer {
+  background-color: #5e5e5e;
+  color: white;
+}
+
+header a,
+footer a {
+  display: block;
+}
+
+
+/* Header items */
+
+header {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.2rem;
+  border-radius: 50%;
+}
+
+.main-menu {
+  position: absolute;
+  right: 1.2rem;
+  top: 45px;
+}
+
+.main-menu .menu-item {
+  vertical-align: top;
+  position: relative;
+}
+
+.main-menu .menu-item:hover > .sub-menu {
+  display: block;
+}
+
+.main-menu a {
+  color: white;
+  padding: 0.6em;
+  line-height: 1.2em;
+  border-radius: 3px;
+}
+
+.main-menu a:hover {
+  color: #5e5e5e;
+  background-color: white;
+}
+
+.sub-menu {
+  min-width: 120px;
+  position: absolute;
+  right: 0;
+  padding-top: 10px;
+  display: none;
+}
+
+.sub-menu ul {
+  background-color: #5e5e5e;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+
+/* from cssarrowplease.com */
+.sub-menu ul:before, .sub-menu ul:after {
+  top: -7px;
+  left: 85%;
+  border: solid transparent;
+  border-color: transparent;
+  border-bottom-color: white;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.sub-menu ul:before {
+  border-width: 9px;
+  margin-left: -9px;
+}
+
+.sub-menu ul:after {
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.main-title {
+  text-align: center;
+  margin: 0;
+  line-height: 130px;
+}
+
+
+/* Articles */
+
+.article {
+  padding: 1.2em;
+  overflow: auto;
+  /* Check what happens if you remove overflow: auto */
+}
+
+.article img {
+  float: left;
+  margin: 0 0.8rem 0.3rem 0;
+}
+
+.main-content,
+.side-content {
+  display: inline-block;
+}
+
+.main-content {
+  float: left;
+  width: 72vw;
+  /* vw makes it quite responsive. Give it a value in px, e.g. 800px and check what happens. */
+}
+
+.main-content .article {
+  width: 50%;
+  float: left;
+  border-bottom: 1px dotted #5e5e5e;
+}
+
+.main-content .article.article--featured {
+  width: 100%;
+  display: block;
+  float: none;
+  background-color: rgba(94, 94, 94, 0.1);
+}
+
+.side-content {
+  width: 26vw;
+  float: right;
+  font-size: 0.9rem;
+  padding-top: 1.2rem;
+  /* vw makes it quite responsive. Give it a value in px, e.g. 300px and check what happens. */
+}
+
+.side-content-title {
+  margin-left: 1.2rem;
+}
+
+
+/* Footer items */
+
+footer {
+  clear: both;
+  font-size: 0.9rem;
+}
+
+.footer-copyright,
+.footer-menu {
+  margin: 0 1.2rem;
+}
+
+.footer-copyright {
+  display: inline-block;
+  line-height: 80px;
+}
+
+.footer-menu {
+  font-size: 26px;
+  float: right;
+}
+
+.footer-menu:after {
+  clear: both;
+}
+
+.footer-menu ul {
+  line-height: 80px;
+}
+
+.footer-menu .menu-item {
+  padding: 0 0.2rem;
+  vertical-align: middle;
+}
+
+.footer-menu .menu-item:last-child {
+  padding-right: 0;
+}
+
+.footer-menu a {
+  color: white;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.footer-menu a:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-menu a:hover {
+  color: #5e5e5e;
+  background-color: white;
+}
